@@ -21,4 +21,8 @@ class Post extends Model
      */
     private $body;
     private $user_id;
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }
