@@ -10,7 +10,7 @@
 
 @if(session('success'))
     <div class="alert alert-success" role="alert">
-        <strong>Well done!</strong> You successfully created post.
+        <strong>Well done!</strong>
         {{session('success')}}
     </div>
 @endif

@@ -20,4 +20,5 @@ class Post extends Model
      * @var array|string|null
      */
     private $body;
+    private $user_id;
 }

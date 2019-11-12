@@ -3,6 +3,7 @@
 @section('content')
     <h1>Create Post</h1>
 
+    <div class="editor-container">
     <form method="post" action="{{ route('posts.store') }}">
         <div class="form-group">
             @csrf
@@ -16,6 +17,6 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
+    </div>
 @endsection
 
