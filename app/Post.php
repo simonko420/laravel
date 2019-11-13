@@ -21,6 +21,10 @@ class Post extends Model
      */
     private $body;
     private $user_id;
+    /**
+     * @var string
+     */
+    private $cover_image;
 
     public function user(){
         return $this->belongsTo('App\User');

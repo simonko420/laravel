@@ -2,11 +2,12 @@
 
 @section('content')
     <h1>{{$post->title}}</h1>
-     <div>
-         {{$post->body}}
-     </div>
+    <img style="width:50%" src="/storage/cover_images/{{$post->cover_image}}" alt="image">
+    <div>
+        <p class="h4"> {{$post->body}}</p>
+    </div>
     <hr>
-    <small>Written on {{$post->created_at->diffForHumans()}} by {{$post->user->name}}</small>
+    <small class="text-muted">Written {{$post->created_at->diffForHumans()}} by {{$post->user->name}}</small>
     <hr>
     @if(!Auth::guest())
         @if(Auth::user()->id == $post->user_id)
@@ -14,8 +15,7 @@
             <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <!-- edit button -->
-                <button type="submit" class="btn btn-danger float-right">Delete</button>
+                <button type="submit" class="btn btn-danger">Delete</button>
             </form>
         @endif
     @endif
