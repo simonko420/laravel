@@ -6,11 +6,8 @@
 
 <div id="app">
    <div class="container">
-       <articles>
-
-       </articles>
+        <Addtodo v-on:add-todo="addTodo"></Addtodo>
+      <todos v-bind:todos="todos" v-on:del-todo="deleteTodo"></todos>
    </div>
 </div>
-
-<script src="{{ asset('js/app.js') }}"></script>
 @endsection
